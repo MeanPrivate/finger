@@ -9,7 +9,7 @@ body {
 }
 
 svg {
-  width: 35%;
+  width: 25%;
   height: auto;
   stroke-dasharray: 2000;
   stroke-dashoffset: 2000;
