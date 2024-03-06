@@ -11,6 +11,18 @@ body {
   color: #ffffff;
   background-color: #d3d3d3;
   overflow-x: hidden;
+  animation: fadein 1s linear backwards;
+}
+
+@keyframes fadein {
+  from {
+    background-color: #000000;
+    opacity: 10%;
+  }
+
+  to {
+    opacity: 100%;
+  }
 }
 
 a {
@@ -67,6 +79,7 @@ h6 span {
   margin: 10px auto;
   cursor: pointer;
   background-color: #ffffffbe;
+  animation: fadein 1s linear forwards;
 }
 
 .checkbox:checked+label:before,
@@ -87,6 +100,7 @@ h6 span {
   text-align: center;
   font-size: 24px;
   transition: all 0.5s ease;
+  animation: fadein 1s linear forwards;
 }
 
 .checkbox:checked+label:before {
@@ -134,6 +148,7 @@ h6 span {
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
+  animation: fadein 1.5s linear forwards;
 }
 
 .card-back {
