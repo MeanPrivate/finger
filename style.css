@@ -78,7 +78,6 @@ h6 span {
   margin: 10px auto;
   cursor: pointer;
   background-color: #ffffffbe;
-  animation: fadein 1s linear forwards;
 }
 
 .checkbox:checked+label:before,
@@ -99,7 +98,6 @@ h6 span {
   text-align: center;
   font-size: 24px;
   transition: all 0.5s ease;
-  animation: fadein 1s linear forwards;
 }
 
 .checkbox:checked+label:before {
