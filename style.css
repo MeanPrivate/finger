@@ -16,7 +16,6 @@ body {
 
 @keyframes fadein {
   from {
-    background-color: #000000;
     opacity: 10%;
   }
 
