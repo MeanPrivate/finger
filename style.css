@@ -11,7 +11,7 @@ body {
   color: #ffffff;
   background-color: #d3d3d3;
   overflow-x: hidden;
-  animation: fadein 1s linear backwards;
+  animation: fadein 2s linear backwards;
 }
 
 @keyframes fadein {
