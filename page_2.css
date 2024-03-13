@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+svg-container,
+svg {
+  padding-right: 15em;
+  width: 90%;
+  animation: fadein 1s linear forwards;
+  text-align: center;
+  fill: rgb(222, 222, 222);
+  font-size: 13pt;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  animation: expand 2.5s linear forwards;
+}
+
+
+
+@keyframes fadein {
+  from {
+    opacity: 20%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+text {
+  fill: rgb(144, 144, 144);
+  font-size: 13pt;
+  line-height: 2.1;
+  letter-spacing: 0.1em;
+  word-spacing: 0.1em;
+  font-weight: 400;
+  animation: movePath 2s linear infinite;
+}
+
+text:hover {
+  animation: select 0.3s linear forwards;
+}
+
+
+
+
+@keyframes select {
+  from {
+    fill: rgb(144, 144, 144);
+    font-size: 13pt;
+    font-weight: 400;
+  }
+
+  to {
+    fill: rgb(217, 217, 217);
+    font-weight: 500;
+    font-size: 13.5pt;
+  }
+}
+
+
+@keyframes movePath {
+  from {
+    startOffset: 100%;
+  }
+
+  to {
+    startOffset: 0;
+  }
+}
+
+
+
+@keyframes expand {
+  from {
+    width: 90%;
+  }
+
+  to {
+    width: 300%;
+  }
+}
