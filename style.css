@@ -159,9 +159,8 @@ h6 span {
   position: absolute;
   width: 100%;
   padding: 0 35px;
-  top: 50%;
+  top: 22%;
   left: 0;
-  transform: translate3d(0, -50%, 35px) perspective(100px);
   z-index: 20;
   display: block;
 }
