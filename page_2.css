@@ -9,6 +9,7 @@ body {
 
 svg-container,
 svg {
+<<<<<<< Updated upstream
   padding-right: 15em;
   width: 150%;
   animation: fadein 1s linear forwards;
@@ -17,6 +18,11 @@ svg {
   font-size: 15pt;
   font-family: "Black Ops One", system-ui;
   animation: expand 3.5s linear forwards;
+=======
+  width: 30%;
+  animation: fadein 1s linear forwards;
+  text-anchor:start;
+>>>>>>> Stashed changes
 }
 
 
@@ -32,6 +38,7 @@ svg {
 }
 
 text {
+<<<<<<< Updated upstream
   fill: rgb(144, 144, 144);
   font-size: 15pt;
   line-height: 2.1;
@@ -39,6 +46,16 @@ text {
   word-spacing: 0.2em;
   font-weight: 100;
   animation: movePath 0.1s linear infinite;
+=======
+  fill: rgb(236, 237, 240);
+  font-size: 12px;
+  animation: movePath 2s linear infinite;
+  letter-spacing: 3px;
+  text-anchor: middle;
+  
+  direction: alternate;
+  
+>>>>>>> Stashed changes
 }
 
 text:hover {

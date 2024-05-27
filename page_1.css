@@ -9,7 +9,11 @@ body {
 }
 
 svg {
+<<<<<<< Updated upstream
   width: 18%;
+=======
+  width: 25%;
+>>>>>>> Stashed changes
   height: auto;
   stroke-dasharray: 2000;
   stroke-dashoffset: 2000;
