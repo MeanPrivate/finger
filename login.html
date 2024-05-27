@@ -15,37 +15,19 @@
   <link rel='stylesheet' href='https://unicons.iconscout.com/release/v2.1.9/css/unicons.css'>
   <!-- 사용자 정의 스타일시트 로드 -->
   <link rel="stylesheet" href="./style.css">
-  <!-- 커서 스타일 추가 -->
-  <style>
-      body, html {
-          cursor: none; /* 기본 커서 숨기기 */
-      }
-
-      .custom-cursor {
-          position: fixed;
-          width: 10px;
-          height: 10px;
-          background-color: rgb(189, 189, 189);
-          border-radius: 50%;
-          pointer-events: none; /* 커서 요소가 클릭 이벤트에 반응하지 않도록 설정 */
-          z-index: 9999; /* 다른 요소 위에 표시 */
-          transform: translate(-50%, -50%); /* 커서 중앙에 맞춤 */
-      }
-  </style>
 </head>
 
 <body>
-  <!-- 커스텀 커서 요소 -->
-  <div class="custom-cursor" id="customCursor"></div>
 
   <!-- 메인 섹션 -->
   <div class="section">
+    <div class="cursor"></div>
     <div class="container">
       <div class="row full-height justify-content-center">
         <div class="col-12 text-center align-self-center py-5">
           <div class="section pb-5 pt-5 pt-sm-2 text-center">
             <!-- 로그인과 회원가입 전환을 위한 체크박스 -->
-            <p class="mb-4 pb-3" style="font-size: 15pt;color: black;">&ensp;Log In &ensp; &ensp; Sign Up</p>
+						<p class="mb-4 pb-3" style="font-size: 15pt;color: black;" ;">&ensp;Log In &ensp; &ensp; Sign Up</p>
             <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
             <label for="reg-log"></label>
 
@@ -66,7 +48,7 @@
                         <i class="input-icon uil uil-lock-alt"></i>
                       </div>
                       <!-- 제출 버튼 -->
-                      <button class="btn mt-4" onclick="redirectToSVGPage()" style="cursor: none">submit</button>
+                      <button class="btn mt-4" onclick="redirectToSVGPage()">submit</button>
                     </div>
                   </div>
                 </div>
@@ -89,7 +71,7 @@
                         <i class="input-icon uil uil-lock-alt"></i>
                       </div>
                       <!-- 제출 버튼 -->
-                      <button class="btn mt-4" onclick="redirectToSVGPage()" style="cursor: none">submit</button>
+                      <button class="btn mt-4" onclick="redirectToSVGPage()">submit</button>
                     </div>
                   </div>
                 </div>
@@ -102,19 +84,46 @@
     </div>
   </div>
 
+  <!-- 외부 자바스크립트 파일 로드 -->
+  <script src="./script.js"></script>
+
+  <!-- 커서 애니메이션 자바스크립트 -->
+  <script>
+    (function () {
+      const link = document.querySelectorAll('nav > .hover-this');
+      const cursor = document.querySelector('.cursor');
+
+      const animateit = function (e) {
+        const span = this.querySelector('span');
+        const { offsetX: x, offsetY: y } = e,
+        { offsetWidth: width, offsetHeight: height } = this,
+        move = 25,
+        xMove = x / width * (move * 2) - move,
+        yMove = y / height * (move * 2) - move;
+
+        span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+        if (e.type === 'mouseleave') span.style.transform = '';
+      };
+
+      const editCursor = e => {
+        const { clientX: x, clientY: y } = e;
+        cursor.style.left = x + 'px';
+        cursor.style.top = y + 'px';
+      };
+
+      link.forEach(b => b.addEventListener('mousemove', animateit));
+      link.forEach(b => b.addEventListener('mouseleave', animateit));
+      window.addEventListener('mousemove', editCursor);
+    })();
+  </script>
+
   <!-- 폼 제출 시 리다이렉트 자바스크립트 -->
   <script>
     function redirectToSVGPage() {
       const userInput = encodeURIComponent(document.getElementById('user-ideal').value);
       window.location.href = `main.html?userInput=${userInput}`;
     }
-
-    const customCursor = document.getElementById('customCursor');
-
-    document.addEventListener('mousemove', (e) => {
-        customCursor.style.left = `${e.clientX}px`;
-        customCursor.style.top = `${e.clientY}px`;
-    });
   </script>
 </body>
 

@@ -11,10 +11,11 @@ svg-container,
 svg {
 <<<<<<< Updated upstream
   padding-right: 15em;
-  width: 150%;
+  width: 90%;
   animation: fadein 1s linear forwards;
   text-align: center;
   fill: rgb(222, 222, 222);
+<<<<<<< HEAD
   font-size: 15pt;
   font-family: "Black Ops One", system-ui;
   animation: expand 3.5s linear forwards;
@@ -23,6 +24,11 @@ svg {
   animation: fadein 1s linear forwards;
   text-anchor:start;
 >>>>>>> Stashed changes
+=======
+  font-size: 13pt;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  animation: expand 2.5s linear forwards;
+>>>>>>> parent of 8b43122 (D)
 }
 
 
@@ -40,9 +46,10 @@ svg {
 text {
 <<<<<<< Updated upstream
   fill: rgb(144, 144, 144);
-  font-size: 15pt;
+  font-size: 13pt;
   line-height: 2.1;
   letter-spacing: 0.1em;
+<<<<<<< HEAD
   word-spacing: 0.2em;
   font-weight: 100;
   animation: movePath 0.1s linear infinite;
@@ -56,10 +63,15 @@ text {
   direction: alternate;
   
 >>>>>>> Stashed changes
+=======
+  word-spacing: 0.1em;
+  font-weight: 400;
+  animation: movePath 2s linear infinite;
+>>>>>>> parent of 8b43122 (D)
 }
 
 text:hover {
-  animation: select 0.1s linear forwards;
+  animation: select 0.3s linear forwards;
 }
 
 
@@ -68,12 +80,14 @@ text:hover {
 @keyframes select {
   from {
     fill: rgb(144, 144, 144);
-    font-size: 15pt;
+    font-size: 13pt;
+    font-weight: 400;
   }
 
   to {
     fill: rgb(217, 217, 217);
-    font-size: 15.2pt;
+    font-weight: 500;
+    font-size: 13.5pt;
   }
 }
 
@@ -92,10 +106,10 @@ text:hover {
 
 @keyframes expand {
   from {
-    width: 150%;
+    width: 90%;
   }
 
   to {
-    width: 500%;
+    width: 300%;
   }
 }

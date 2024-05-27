@@ -9,7 +9,7 @@ body {
   font-size: 17px;
   line-height: 1.7;
   color: #ffffff;
-  background-color: #ededed;
+  background-color: #d3d3d3;
   overflow-x: hidden;
   animation: fadein 2s linear backwards;
 }
@@ -24,6 +24,14 @@ body {
   }
 }
 
+a {
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+
+a:hover {
+  text-decoration: none;
+}
 
 p {
   font-weight: 500;
@@ -68,8 +76,8 @@ h6 span {
   border-radius: 8px;
   padding: 0;
   margin: 10px auto;
+  cursor: pointer;
   background-color: #ffffffbe;
-  cursor: none;
 }
 
 .checkbox:checked+label:before,
@@ -90,7 +98,6 @@ h6 span {
   text-align: center;
   font-size: 24px;
   transition: all 0.5s ease;
-  cursor: none;
 }
 
 .checkbox:checked+label:before {
@@ -152,6 +159,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  cursor: none;
 }
 
 .nav-wrapper {
@@ -183,6 +191,19 @@ span {
   transition: transform 0.1s linear;
 }
 
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  padding: 0.3rem;
+  background-color: #fff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: transform 0.3s ease;
+}
+
+.hover-this:hover~.cursor {
+  transform: translate(-50%, -50%) scale(8);
+}
 
 @media(min-width: 900px) {
   nav {
@@ -222,7 +243,6 @@ span {
 }
 
 .form-style {
-  cursor: none;
   padding: 13px 20px;
   padding-left: 45px;
   height: 46px;
